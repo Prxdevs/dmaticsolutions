@@ -6371,6 +6371,113 @@
 <body
 	class="home page-template page-template-page-templates page-template-template-full-width-page-without-header-title page-template-page-templatestemplate-full-width-page-without-header-title-php page page-id-22931 theme-selo woocommerce-no-js elementor-default elementor-kit-11 elementor-page elementor-page-22931">
 	
+
+
+	<style>
+		/* Styling for the modal container */
+
+	
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 30%;
+	margin-left: 35%;
+	height: 100%;
+	z-index: 999;
+  }
+
+  @media screen and (max-width:600px) {
+	.modal {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 80%;
+		margin-left: 10%;
+		height: 100%;
+		z-index: 999;
+	  }
+}
+
+@media screen and (max-width:600px) {
+	.modal {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 80%;
+		margin-left: 10%;
+		height: 100%;
+		z-index: 999;
+	  }
+}
+  
+  /* Styling for the modal content */
+  .modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Styling for the close button */
+  .close-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 24px;
+	cursor: pointer;
+  }
+  
+  /* Additional styling for the form fields and button */
+  form {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  label {
+	margin-bottom: 5px;
+  }
+  
+  input, textarea, button {
+	margin-bottom: 10px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+  }
+  
+  button {
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+  }
+  
+	</style>
+	<div class="modal" id="contactModal">
+		<div class="modal-content">
+		  <span class="close-button" id="closeModal">&times;</span>
+		  <h2>Contact Us</h2>
+		  <form action="#" method="post">
+			<!-- Your contact form fields here -->
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+			<label for="number">Number:</label>
+			<input type="number" id="number" name="number" required>
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" required></textarea>
+			<button type="submit">Submit</button>
+		  </form>
+		</div>
+	  </div>
 	
 	<nav id="pr-nav" class="primary-menu navbar navbar-expand-lg navbar-dark">
 		<div class="container-fluid primary-menu-inner px-0">
@@ -9212,6 +9319,22 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 
 	<!-- GA Google Analytics @ https://m0n.co/ga -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187555911-1"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const contactModal = document.getElementById('contactModal');
+			const closeModal = document.getElementById('closeModal');
+		  
+			// Display the modal on page load
+			contactModal.style.display = 'block';
+		  
+			// Close the modal when clicking on the close button
+			closeModal.addEventListener('click', function () {
+			  contactModal.style.display = 'none';
+			});
+		  });
+		  
+		  
+	</script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
