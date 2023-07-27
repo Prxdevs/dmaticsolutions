@@ -6361,11 +6361,11 @@
 			margin: 0 !important;
 		}
 	</style>
-	<link rel="icon" href="./wp-content/uploads/2022/09/cropped-selo-fav-32x32.png" sizes="32x32" />
-	<link rel="icon" href="./wp-content/uploads/2022/09/cropped-selo-fav-192x192.png" sizes="192x192" />
-	<link rel="apple-touch-icon" href="./wp-content/uploads/2022/09/cropped-selo-fav-180x180.png" />
+	<link rel="icon" href="./dmaticlogo.png" sizes="32x32" />
+	<link rel="icon" href="./dmaticlogo.png" sizes="192x192" />
+	<link rel="apple-touch-icon" href="./dmaticlogo.png" />
 	<meta name="msapplication-TileImage"
-		content="https://selo.b-cdn.net/wp-content/uploads/2022/09/cropped-selo-fav-270x270.png" />
+		content="./dmaticlogo.png" />
 </head>
 
 <body
@@ -6467,24 +6467,248 @@
   }
   
 	</style>
-	<div class="modal" id="contactModal">
-		<div class="modal-content">
-		  <span class="close-button" id="closeModal">&times;</span>
-		  <h2>Contact Us</h2>
-		  <form action="#" method="post">
-			<!-- Your contact form fields here -->
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" required>
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" required>
-			<label for="number">Phone:</label>
-			<input type="number" id="number" name="number" required>
-			<label for="message">City:</label>
-			<input type="message" id="message" name="message" required>
-			<button style="width:30%; margin-left:35%; " type="submit">Submit</button>
-		  </form>
+
+	<style>
+		/* CSS converted from SCSS */
+
+.modal-window {
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.25);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s;
+  }
+  
+  .modal-window:target {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+  }
+  
+  .modal-window > div {
+	width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2em;
+	background: white;
+  }
+  
+  header {
+	font-weight: bold;
+  }
+  
+  h1 {
+	font-size: 150%;
+	margin: 0 0 15px;
+  }
+  
+  .modal-close {
+	color: #aaa;
+	line-height: 50px;
+	font-size: 80%;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 70px;
+	text-decoration: none;
+  }
+  
+  .modal-close:hover {
+	color: black;
+  }
+  
+  /* Demo Styles */
+  
+/*  html,
+  body {
+	height: 100%;
+  }
+  
+  html {
+	font-size: 18px;
+	line-height: 1.4;
+  }
+  
+  body {
+	font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+	  Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-weight: 600;
+	background-image: linear-gradient(to right, #7f53ac 0, #657ced 100%);
+	color: black;
+  }   
+
+
+  */
+  
+  a {
+	color: inherit;
+	text-decoration: none;
+  }
+  
+  .container {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  .modal-window > div {
+	border-radius: 1rem;
+  }
+  
+  .modal-window div:not(:last-of-type) {
+	margin-bottom: 15px;
+  }
+  
+  .logo {
+	max-width: 150px;
+	display: block;
+  }
+  
+  small {
+	color: lightgray;
+  }
+  
+  .btn {
+	background-color: rgb(0, 0, 0);
+	padding: 1em 1.5em;
+	border-radius: 0.5rem;
+	text-decoration: none;
+	color:#fff;
+	transition: 0.2s;
+  }
+
+  .btn:hover{
+	border-color:black;
+	background-color: #fff;
+	color:#000;
+  }
+  
+  .btn i {
+	padding-right: 0.3em;
+  }
+  
+	</style>
+
+	<div id="open-modal" class="modal-window">
+		<div>
+		  
+		  
+		  <a href="#" title="Close" class="modal-close">Close</a>
+		  <form
+					action="./contact-us/index.html"
+					method="post"
+					class="wpcf7-form init"
+					aria-label="Contact form"
+					novalidate="novalidate"
+					data-status="init">
+					<div style="display: none;">
+						<input type="hidden"
+							name="_wpcf7"
+							value="18" />
+						<input type="hidden"
+							name="_wpcf7_version"
+							value="5.7.2" />
+						<input type="hidden"
+							name="_wpcf7_locale"
+							value="en_US" />
+						<input type="hidden"
+							name="_wpcf7_unit_tag"
+							value="wpcf7-f18-p1805-o1" />
+						<input type="hidden"
+							name="_wpcf7_container_post"
+							value="1805" />
+						<input type="hidden"
+							name="_wpcf7_posted_data_hash"
+							value="" />
+					</div>
+					<p><label> Your name<br />
+							<span
+								class="wpcf7-form-control-wrap"
+								data-name="your-name"><input
+									size="40"
+									class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+									aria-required="true"
+									aria-invalid="false"
+									value=""
+									type="text"
+									name="your-name" /></span>
+						</label>
+					</p>
+					<p><label> Your email<br />
+							<span
+								class="wpcf7-form-control-wrap"
+								data-name="your-email">
+								<input
+									size="40"
+									class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+									aria-required="true"
+									aria-invalid="false"
+									value=""
+									type="email"
+									name="your-email" />
+								</span>
+						</label>
+					</p>
+					<p>
+						<label> Phone<br />
+							<span
+								class="wpcf7-form-control-wrap"
+								data-name="your-phone">
+								<input
+									size="40"
+									class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+									aria-required="true"
+									aria-invalid="false"
+									value=""
+									type="message"
+									name="your-phone" />
+								</span>
+						</label>
+					</p>
+					<p>
+						<label> Your
+							message<br />
+							<span
+								class="wpcf7-form-control-wrap"
+								data-name="your-message">
+								<input
+									size="40"
+									class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+									aria-required="true"
+									aria-invalid="false"
+									value=""
+									type="message"
+									name="your-message" />
+								</span>
+						</label>
+					</p>
+					<p><input
+							class="wpcf7-form-control has-spinner wpcf7-submit"
+							type="submit"
+							value="Submit" id="downloadButton" />
+					</p>
+					<div class="wpcf7-response-output"
+						aria-hidden="true">
+					</div>
+				</form>
+																						
+
+
+
+		 
 		</div>
 	  </div>
+	
 	
 	<nav id="pr-nav" class="primary-menu navbar navbar-expand-lg navbar-dark">
 		<div class="container-fluid primary-menu-inner px-0">
@@ -6849,7 +7073,7 @@
 															data-widget_type="button.default">
 															<div class="elementor-widget-container">
 																<div class="elementor-button-wrapper">
-																	<a href="https://wa.me/8401918193"
+																	<a class="btn" href="#open-modal"
 																		class="elementor-button-link elementor-button elementor-size-xl"
 																		role="button">
 																		<span class="elementor-button-content-wrapper">
@@ -6859,11 +7083,24 @@
 																	</a>
 																</div>
 															</div>
+															<div class="elementor-widget-container">
+																<div class="elementor-button-wrapper">
+																	<!-- <a href="./download.pdf" download>Download PDF</a> -->
+																	<a class="btn" href="./download.pdf" download
+																		class="elementor-button-link elementor-button elementor-size-xl"
+																		role="button">
+																		<span class="elementor-button-content-wrapper">
+																			<span class="elementor-button-text">Download PDF</span>
+																		</span>
+																	</a>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</section>
+										
 										<section
 											class="elementor-section elementor-inner-section elementor-element elementor-element-eeae5a9 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
 											data-id="eeae5a9" data-element_type="section">
@@ -8976,6 +9213,38 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 				</div><!-- .entry-content -->
 
 
+				<form method="post">
+					<label for="username">GFG Username</label>
+					<input type="text" name="username" />
+					<input type="submit" id="submit-form" 
+						value="submit" hidden />
+				</form>
+			  
+				<button id="downloadBtn">Submit</button>
+
+				
+			  
+				
+  <script>
+    const downloadBtn = document.getElementById('downloadBtn');
+    downloadBtn.addEventListener('click', () => {
+      // Replace 'path/to/your-pdf.pdf' with the actual path to your PDF file.
+      const pdfUrl = './download.pdf';
+      downloadPDF(pdfUrl);
+    });
+
+    function downloadPDF(url) {
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.download = './download.pdf'; // Replace with the desired filename.
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+
+
 			</div><!-- .post-inner -->
 
 			<div class="section-inner clearfix"></div><!-- .section-inner -->
@@ -9151,7 +9420,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 																							<ul></ul>
 																						</div>
 																						<form
-																							action="https://selo.peerduck.com/contact-us/#wpcf7-f18-p1805-o1"
+																							action=""
 																							method="post"
 																							class="wpcf7-form init"
 																							aria-label="Contact form"
@@ -9329,23 +9598,61 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 
 
 	<!-- GA Google Analytics @ https://m0n.co/ga -->
+
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187555911-1"></script>
+	
 	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			const contactModal = document.getElementById('contactModal');
-			const closeModal = document.getElementById('closeModal');
+		// Function to handle the button click and trigger the download
+		function handleDownload() {
+		  // Replace 'your_pdf_file.pdf' with the actual URL or file path of your PDF
+		  const pdfUrl = 'your_pdf_file.pdf';
 		  
-			// Display the modal on page load
-			contactModal.style.display = 'block';
+		  // Create an anchor element and set its download attribute and href to the PDF URL
+		  const link = document.createElement('a');
+		  link.setAttribute('download', 'downloaded_file.pdf');
+		  link.setAttribute('href', pdfUrl);
 		  
-			// Close the modal when clicking on the close button
-			closeModal.addEventListener('click', function () {
-			  contactModal.style.display = 'none';
-			});
-		  });
-		  
-		  
-	</script>
+		  // Programmatically click the anchor element to trigger the download
+		  link.click();
+		}
+	
+		// Get the button element to download the PDF
+		const downloadButton = document.getElementById('downloadButton');
+	
+		// Add a click event listener to the button
+		downloadButton.addEventListener('click', handleDownload);
+	  </script>
+	<script>
+		// Function to open the modal
+		function openModal() {
+		  const contactModal = document.getElementById('contactModal');
+		  contactModal.style.display = 'block';
+		}
+	  
+		// Function to close the modal
+		function closeModal() {
+		  const contactModal = document.getElementById('contactModal');
+		  contactModal.style.display = 'none';
+		}
+	  
+		// Get the button element to open the modal
+		const openModalButton = document.getElementById('openModalButton');
+	  
+		// Get the close button element inside the modal
+		const closeModal = document.getElementById('closeModal');
+	  
+		// Open the modal when clicking on the button
+		openModalButton.addEventListener('click', openModal);
+	  
+		// Close the modal when clicking on the close button
+		closeModal.addEventListener('click', closeModal);
+	  </script>
+	  
+
+
+	
+
+
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
