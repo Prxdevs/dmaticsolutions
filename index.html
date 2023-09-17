@@ -6714,6 +6714,36 @@
 		 
 		</div>
 	  </div>
+
+	  <script>
+		function validateForm() {
+		  var email = document.forms[0]["email"].value;
+		  var phone = document.forms[0]["phone"].value;
+	  
+		  if (email === "" || phone === "") {
+			alert("Please enter both an email and a phone number.");
+			return false;
+		  }
+	  
+		  // Trigger PDF download
+		  window.open('path-to-your-pdf.pdf', '_blank');
+		  
+		  return true;
+		}
+	  
+		// Enable the submit button when both email and phone are provided
+		document.addEventListener("input", function() {
+		  var email = document.forms[0]["email"].value;
+		  var phone = document.forms[0]["phone"].value;
+		  var submitBtn = document.getElementById("downloadBtn");
+	  
+		  if (email !== "" || phone !== "") {
+			submitBtn.disabled = false;
+		  } else {
+			submitBtn.disabled = true;
+		  }
+		});
+	  </script>
 	
 	<style>
 		.hahaha{
@@ -6930,7 +6960,7 @@
 						}
 					}
 				</style>
-				<div class="header-cta"><a href="https://wa.me/23456789011" target="_blank">
+				<div class="header-cta"><a href="https://wa.me/+919712345330" target="_blank">
 						<div class="d-inline-block elementor-button-link elementor-button elementor-size-md" style="padding:10px;">
 							Whatsapp
 							<!-- <img class="wappicon"  src="./whatsapp.png"/> -->
@@ -8498,7 +8528,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 																		<div class="ue-carousel-item" style="">
 																			<div
 																				class="uc_classic_carousel_placeholder">
-																				<a href="./contact-us/index.html"
+																				<a href="./contact.html"
 																					title="Discover more"> <img
 																						decoding="async"
 																						src="./wp-content/uploads/2023/03/g5h.png"
@@ -8525,7 +8555,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 
 																				<div class="ue_button"><a
 																						class="uc_more_btn "
-																						href="./contact-us/index.html"
+																						href="./contact.html"
 																						title="Discover more">Discover
 																						more</a></div>
 
@@ -8537,7 +8567,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 																		<div class="ue-carousel-item">
 																			<div
 																				class="uc_classic_carousel_placeholder">
-																				<a href="./contact-us/index.html"
+																				<a href="./contact.html"
 																					title="Discover more"> <img
 																						decoding="async"
 																						loading="lazy"
@@ -8565,7 +8595,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 
 																				<div class="ue_button"><a
 																						class="uc_more_btn "
-																						href="./contact-us/index.html"
+																						href="./contact.html"
 																						title="Discover more">Discover
 																						more</a></div>
 
@@ -8577,7 +8607,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 																		<div class="ue-carousel-item">
 																			<div
 																				class="uc_classic_carousel_placeholder">
-																				<a href="./contact-us/index.html"
+																				<a href="./contact.html"
 																					title="Discover more"> <img
 																						decoding="async"
 																						loading="lazy"
@@ -8605,7 +8635,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 
 																				<div class="ue_button"><a
 																						class="uc_more_btn "
-																						href="./contact-us/index.html"
+																						href="./contact.html"
 																						title="Discover more">Discover
 																						more</a></div>
 
@@ -8617,7 +8647,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 																		<div class="ue-carousel-item">
 																			<div
 																				class="uc_classic_carousel_placeholder">
-																				<a href="./contact-us/index.html"
+																				<a href="./contact.html"
 																					title="Discover more"> <img
 																						decoding="async"
 																						src="./wp-content/uploads/2023/03/g5h.png"
@@ -8644,7 +8674,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 
 																				<div class="ue_button"><a
 																						class="uc_more_btn "
-																						href="./contact-us/index.html"
+																						href="./contact.html"
 																						title="Discover more">Discover
 																						more</a></div>
 
@@ -8656,7 +8686,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 																		<div class="ue-carousel-item">
 																			<div
 																				class="uc_classic_carousel_placeholder">
-																				<a href="./contact-us/index.html"
+																				<a href="./contact.html"
 																					title="Discover more"> <img
 																						decoding="async"
 																						loading="lazy"
@@ -8684,7 +8714,7 @@ We hold customer until he is satisfied. We believe in repeat business only. We j
 
 																				<div class="ue_button"><a
 																						class="uc_more_btn "
-																						href="./contact-us/index.html"
+																						href="./contact.html"
 																						title="Discover more">Discover
 																						more</a></div>
 
@@ -9753,7 +9783,21 @@ Nr. Agasiya Hotel Laldarwaja
 	  </script>
 	  
 
-
+	  <script>
+		document.addEventListener('DOMContentLoaded', function () {
+		  const form = document.querySelector('form'); // Get the form element
+	  
+		  form.addEventListener('submit', function (event) {
+			event.preventDefault(); // Prevent the default form submission behavior
+	  
+			// Perform any form data processing here (e.g., send it to a server)
+	  
+			// Redirect to the thank-you page
+			window.location.href = 'thankyou.html';
+		  });
+		});
+	  </script>
+	  
 	
 
 
