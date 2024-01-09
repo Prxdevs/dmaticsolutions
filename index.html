@@ -9723,59 +9723,59 @@
 																	
 																	<div class="nd_elements_cf7_component">
 																		
-															<div class=" "  lang="en-US" dir="ltr">
-															<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-															
-															<form id="myForm">
-																<input type="text" name="name" id="namee"
-																	placeholder="Your Name"
-																	required /><br><br>
-																<input type="email" name="email" id="emaill"
-																	placeholder="Your Email"
-																	required /><br><br>
-																<input type="tel" name="phone" id="phonee"
-																	placeholder="Your Phone Number"
-																	required /><br><br>
-																<textarea name="message" id="messagee"
-																	placeholder="Your Message"
-																	required></textarea><br><br>
-																<button
-																	class="wpcf7-form-control has-spinner button-success wpcf7-submit"
-																	type="submit">Submit</button>
-															</form>
-															<script>
-																document.getElementById('myForm').addEventListener('submit', function (event) {
-																	event.preventDefault();
-
-																	const formData = {
-																		name: document.getElementById('namee').value,
-																		email: document.getElementById('emaill').value,
-																		phone: document.getElementById('phonee').value,
-																		message: document.getElementById('messagee').value
-																	};
-
-																	fetch(`${baseURL}/submitForm`, {
-																		method: 'POST',
-																		headers: {
-																			'Content-Type': 'application/json',
-																		},
-																		body: JSON.stringify(formData),
-																	})
-																		.then(response => response.json())
-																		.then(data => {
-																			console.log('Form submission response:', data);
-																			alert('Form submitted successfully!');
-																			window.location.href = '/thankyou.html';
-																			document.getElementById('myForm').reset(); // Optional: Clear the form after submission
-																		})
-																		.catch(error => {
-																			console.error('Error:', error);
-																			alert('Error submitting form. Please try again.');
-																		});
-																});
-															</script>
-															
-															</div>
+																		<div class=" "  lang="en-US" dir="ltr">
+																			<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+																			
+																			<form id="myForm">
+																				<input type="text" name="name" id="namee"
+																					placeholder="Your Name"
+																					required /><br><br>
+																				<input type="email" name="email" id="emaill"
+																					placeholder="Your Email"
+																					required /><br><br>
+																				<input type="tel" name="phone" id="phonee"
+																					placeholder="Your Phone Number"
+																					required /><br><br>
+																				<textarea name="message" id="messagee"
+																					placeholder="Your Message"
+																					required></textarea><br><br>
+																				<button
+																					class="wpcf7-form-control has-spinner button-success wpcf7-submit"
+																					type="submit">Submit</button>
+																			</form>
+																			<script>
+																				document.getElementById('myForm').addEventListener('submit', function (event) {
+																					event.preventDefault();
+					
+																					const formData = {
+																						name: document.getElementById('namee').value,
+																						email: document.getElementById('emaill').value,
+																						phone: document.getElementById('phonee').value,
+																						message: document.getElementById('messagee').value
+																					};
+					
+																					fetch(`${baseURL}/submitForm`, {
+																						method: 'POST',
+																						headers: {
+																							'Content-Type': 'application/json',
+																						},
+																						body: JSON.stringify(formData),
+																					})
+																						.then(response => response.json())
+																						.then(data => {
+																							console.log('Form submission response:', data);
+																							alert('Form submitted successfully!');
+																							window.location.href = '/thankyou.html';
+																							document.getElementById('myForm').reset(); // Optional: Clear the form after submission
+																						})
+																						.catch(error => {
+																							console.error('Error:', error);
+																							alert('Error submitting form. Please try again.');
+																						});
+																				});
+																			</script>
+																			
+																			</div>
 															
 																	</div>		</div>
 																			</div>
